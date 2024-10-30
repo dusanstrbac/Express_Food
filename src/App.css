@@ -1,38 +1,455 @@
-.App {
-  text-align: center;
+* {
+  padding: 0; 
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER PART */
+.Header {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#headerBackground {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  color: white;
+  padding: 5px 20px;
+}
+
+.headerAccount button {
+  padding: 5px 30px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.headerAccount {
+  display: flex;
+  gap: 10px;
+}
+
+#headerSignup {
+  background-color: black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#headerSignup:hover {
+  opacity: .8;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#headerLogin:hover {
+  opacity: .8;
+}
+
+#companyName {
+  font-size: 40px;
+}
+
+.heroSection {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 40px;
+}
+
+.heroSection h1 {
+  font-size: 60px;
+  color: white;
+}
+
+.heroInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.heroInput input {  
+  padding: 0 5px;
+  width: 600px;
+  height: 40px;
+  font-size: 20px;
+}
+
+.heroInput button {
+  padding: 15px 50px;
+  border-radius: 5px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+#heroSearch {
+  background-color: black;
+  color: white;
+}
+
+#heroSearch:hover {
+  opacity: .8;
+}
+
+
+/* INFO CARDS */
+.infoCards {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 40px 20px;
+}
+
+
+
+/* CARD */
+.cardInfo h2 {
+  font-size: 25px;
+}
+
+.cardInfo button {
+  background-color: transparent;
+  border: none;
+  text-decoration: 2px underline;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.cardImage {
+  width: 400px;
+  height: 250px;
+}
+
+.Card img {
+  width: 100%;
+  height: 100%;
+}
+
+/* LOCATIONS */
+.LocationList {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+#locationCountry {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+#locationCountry:hover {
+  color: blue;
+}
+
+#countriesTag {
+  padding: 0 15px;
+  margin-top: 20px;
+}
+
+/* FOOTER */
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 20px;
+  border-top: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.footerCompany {
+  width: 50%;
+}
+
+#footerName {
+  font-size: 50px;
+}
+
+.footerLinks {
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.footerLinks ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.footerLinks a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+.footerLinks a:hover {
+  text-decoration: 1px underline black;
+}
+
+.footerCopyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.socialMedia svg {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.socialMedia {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.footerCopyright .privacy {
+  display: flex;
+  gap: 10px;
+}
+
+.footerCopyright .privacy a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerCopyright .privacy a:hover {
+  text-decoration: 1px underline black;
+}
+
+/* RESPONSIVE DESIGN WITH MEDIA QUERIES */
+@media only screen and (min-width: 2559px) {
+  #companyName {
+    font-size: 80px;
   }
-  to {
-    transform: rotate(360deg);
+  .headerAccount button {
+    font-size: 40px;
+  }
+  .heroSection h1 {
+    font-size: 120px;
+  }
+  .heroInput input {
+    width: 1000px;
+    height: 80px;
+    font-size: 40px;
+  }
+  .heroInput button {
+    font-size: 40px;
+  }
+
+  .cardInfo h2 {
+    font-size: 50px;
+  }
+  .cardImage {
+    width: 600px;
+    height: 400px;
+  }
+  .cardInfo button {
+    font-size: 30px;
+  }
+
+  #countriesTag {
+    font-size: 80px;
+  }
+  .LocationList {
+    font-size: 30px;
+    height: 400px;
+  }
+
+  #footerName {
+    font-size: 80px;
+  }
+  .footerLinks a {
+    font-size: 30px;
+  }
+  .footerLinks ul {
+    gap: 10px;
+  }
+  .footerCopyright .privacy {
+    gap: 30px;
+    font-size: 25px;
+  }
+  .socialMedia svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .socialMedia {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cardImage {
+    width: 300px;
+    height: 150px;
+  }
+  .cardInfo h2 {
+    font-size: 20px;
+  }
+  .cardInfo button {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .heroInput input {
+    width: 500px;
+  }
+  .heroSection {
+    align-items: center;
+  }
+  .LocationList {
+    font-size: 16px;
+  }
+  #footerName {
+    font-size: 40px;
+  }
+  .footerLinks a {
+    font-size: 16px;
+  }
+  .footerCopyright .privacy {
+    font-size: 15px;
+  }
+  .socialMedia svg {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 630px) {
+  .Header {
+    height: 50vh;
+  }
+  #headerBackground {
+    height: 50vh;
+  }
+  #companyName {
+    font-size: 30px;
+  }
+  .headerAccount button {
+    padding: 5px 10px;
+  }
+  .heroSection h1 {
+    font-size: 50px;
+    text-align: center;
+  }
+  .heroInput input {
+    width: 300px;
+    height: 40px;
+  }
+  .heroInput button {
+    padding: 15px 50px;
+  }
+  .heroInput {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .infoCards {
+    gap: 40px;
+  }
+  #countriesTag {
+    text-align: center;
+    font-size: 30px;
+  }
+  .LocationList {
+    font-size: 12px;
+    align-items: center;
+  }
+  .Footer {
+    flex-direction: column;
+  }
+  .footerCompany {
+    width: 100%;
+    text-align: center;
+  }
+  #footerName {
+    font-size: 30px;
+  }
+  .footerLinks {
+    width: 100%;
+    padding-top: 20px;
+    gap: 20px;
+  }
+  .footerLinks a {
+    font-size: 15px;
+  }
+  .footerCopyright .privacy {
+    align-items: center;
+    justify-content: center;
+  }
+  .footerCopyright .privacy a,
+  .footerCopyright .privacy p {
+    font-size: 11px;
+  }
+  .footerCopyright {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .Header {
+    height: 40vh;
+  }
+  #headerBackground {
+    height: 40vh;
+  }
+  #companyName {
+    font-size: 20px;
+  }
+  .headerAccount button {
+    padding: 5px 10px;
+  }
+  .heroSection h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  .heroInput input {
+    width: 300px;
+    height: 40px;
+  }
+  .heroInput button {
+    padding: 15px 50px;
+  }
+  .heroInput {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .cardImage {
+    width: 250px;
+    height: 120px;
+  }
+  .LocationList {
+    font-size: 10px;
+    height: 250px;
+  }
+  .footerLinks {
+    text-align: center;
+    width: 100%;
+    padding: 5px 0;
   }
 }
